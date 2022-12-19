@@ -1,0 +1,429 @@
+:root {
+  --text-color: #202121;
+  --header-line: #57caf4;
+  --header-background: #57caf428;
+  --hover-color: #57f4e7a9;
+  --header-logo-font-family: Roboto;
+}
+
+body {
+  min-width: 360px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--header-background);
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2 {
+  font-size: 1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-flow: wrap;
+}
+
+.flex-item {
+  height: 350px;
+  flex: 1;
+  margin: 20px;
+  padding: 10px;
+}
+
+.primary-container {
+  min-width: 350px;
+  max-width: 350px;
+}
+
+.secondary-container {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.cart-container {
+  min-width: 275px;
+  max-width: 275px;
+}
+
+.description-container {
+  min-width: 90%;
+  max-width: 90%;
+  padding-bottom: 2rem;
+}
+
+/* MEDIA QUERIES */
+
+/* @media screen and (min-width: 500px) {
+  .description-container {
+    min-width: 350px;
+    max-width: 350px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .description-container {
+    min-width: 450px;
+    max-width: 450px;
+  }
+} */
+
+@media screen and (min-width: 800px) {
+  .primary-container {
+    min-width: 350px;
+    max-width: 350px;
+  }
+
+  .secondary-container {
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .cart-container {
+    min-width: 275px;
+    max-width: 275px;
+  }
+
+  /* .description-container {
+    min-width: 700px;
+    max-width: 700px;
+  } */
+}
+
+@media screen and (min-width: 1024px) {
+  .description-container {
+    min-width: 900px;
+    max-width: 900px;
+    flex: 1 1 auto;
+  }
+}
+
+/* -----------------HEADER--------------- */
+
+.header {
+  align-items: center;
+  background-color: var(--header-background);
+  border-top: solid 1.5px var(--header-line);
+  border-bottom: solid 1.5px var(--header-line);
+}
+
+.header__logo {
+  font-size: 1.6em;
+  font-family: var(--header-logo-font-family);
+}
+
+span.header__logo {
+  margin: auto 1rem;
+}
+
+.header__list {
+  align-items: center;
+}
+
+.header__list-item {
+  align-items: center;
+  padding: 10px;
+}
+
+.header__list-item > * {
+  padding: 3px;
+  font-weight: bold;
+}
+
+.header__list-link {
+  text-decoration: none;
+}
+
+button.header__list-link {
+  height: 40px;
+  width: 90px;
+  box-shadow: 4px 4px 4px var(--header-line);
+  border-color: var(--header-line);
+  border-radius: 5px;
+  background: var(--header-background) none repeat scroll 0% 0%;
+  cursor: pointer;
+}
+
+button.header__list-link:hover {
+  background-color: var(--hover-color);
+}
+
+/* ----BOOK-LIST-PAGE----- */
+.forms,
+.search-form,
+.book-list-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.book-list-container {
+  flex-wrap: wrap;
+}
+
+.book-banner {
+  margin: 2rem 1rem;
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 300px;
+  box-shadow: 4px 4px 4px var(--header-line);
+  border: 1px solid var(--header-line);
+  background: var(--header-background) none repeat scroll 0% 0%;
+  color: var(--text-color);
+  
+}
+
+.book-banner:hover {
+  transform: translate(0.2rem, 0.5rem);
+  transition: translate 0.2s ease-in-out;
+}
+
+.book-banner-cover {
+  display: flex;
+  justify-content: space-around;
+}
+
+.book-banner-image {
+  height: 350px;
+}
+
+.book-banner-list {
+}
+
+.book-banner-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 63px;
+}
+
+.book-banner-tag {
+  min-width: 80px;
+}
+
+.book-banner-title,
+.book-banner-author {
+  text-align: right;
+}
+
+.book-banner-price {
+}
+
+.book-banner-btn {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 1.2em 2em;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  transition: #000 0.2s ease 0s;
+  animation: 1.2s ease 0s normal none 1 running smooth-entry-btn;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 4px 4px 4px var(--header-line);
+  border-color: var(--header-line);
+  background: var(--header-background) none repeat scroll 0% 0%;
+  color: var(--text-color);
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* -----------------FOOTER--------------- */
+
+.footer {
+  background-color: var(--header-background);
+  border-top: solid 1.5px var(--header-line);
+  border-bottom: solid 1.5px var(--header-line);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact-list {
+}
+
+.contact-item {
+  padding: 5px;
+}
+
+/* .footer__contact-button-wrapper {
+  background: rgb(3, 233, 34);
+} */
+
+.contact-button {
+  position: fixed;
+  right: 15px;
+  bottom: 32px;
+  z-index: 0;
+}
+
+#contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: #0246c4;
+  box-shadow: 0 0 10px 0 #00000080;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+    background-image: url(../img/contact-us.png);
+  background-size: 82%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.88;
+}
+
+#contact-button ~ button {
+  visibility: hidden;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 20px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #00a1f5, #0064f3);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+  border: 0;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: .2s all linear;
+  -webkit-transition: .2s all linear;
+  -moz-transition: .2s all linear;
+  -ms-transition: .2s all linear;
+  -o-transition: .2s all linear;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#contact-button.open ~ button {
+  visibility: visible;
+  right: 70px;
+  opacity: 1;
+  transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+
+#contact-button ~ a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  opacity: 0;
+  text-decoration: none;
+  color: rgb(248, 248, 247);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: .2s all linear;
+  -webkit-transition: .2s all linear;
+  -moz-transition: .2s all linear;
+  -ms-transition: .2s all linear;
+  -o-transition: .2s all linear;
+}
+
+.contact-mail-me {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.contact-telegram-icon {
+  background-image: url(../img/telegram.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-whatsapp-icon {
+  background-image: url(../img/whatsapp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.contact-messenger-icon {
+  background-image: url(../img/msnger.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#contact-button.open ~ a {
+  opacity: 1;
+  transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+}
+#contact-button.open ~ a:nth-of-type(1) {
+  bottom: 60px;
+}
+#contact-button.open ~ a:nth-of-type(2) {
+  bottom: 120px;
+}
+#contact-button.open ~ a:nth-of-type(3) {
+  bottom: 180px;
+}
+
+.wave {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0% {box-shadow: 0 0 0px 0px #02ec48be;}
+  100% {box-shadow: 0 0 0px 8px rgba(255, 255, 255, 0);}
+}
+
+.open {
+  animation-iteration-count: 1;
+}

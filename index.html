@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width user-skalable=yes">
+    <title>JS Band Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Serif:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="header flex">
+        <div class="header__item flex">
+            <h1 class="header__logo uppercase">JS Band Store</h1>
+            <span class="header__logo">/ Viktor Zvarych</span>
+        </div>
+        <ul class="header__list header__item flex">
+            <li class="header__list-item">
+                <a href="#" class="header__list-link flex">
+                    <img src="../img/cart.svg" alt="image of cart" height="50px" class="cart-img">
+                    <div class="count-of-books flex">
+                        <div class="count-of-books-span"></div>
+                    </div>
+                </a>
+            </li>
+            <li class="header__list-item">
+                <button type="reset" class="header__list-link">Sign-Out</button>
+            </li>
+            <li class="header__list-item flex">
+                <img src="../img/avatar.png" alt="user photo" height="50px" class="cart-user-photo">
+                <p>Username</p>
+            </li>
+        </ul>
+    </header>
+
+    <!-- -----------------BOOK-LIST-PAGE--------------- -->
+    <main class="main">
+        <section class="forms">
+        <div class="search-form">
+            <input class="search-form-count" type="text" name="search-form" placeholder="Search by book name">
+            <div class="search-form-btns">
+                <button class="btn-search"></button>
+            </div>
+        </div>
+
+        <div class="sort-form">
+            <select name="sort-form" id="sort-form" class="sort-form-dropdown">
+                <option class="sort-value" value="price">Price</option>
+                <option class="sort-value" value="book-name">Book name</option>
+                <option class="sort-value" value="author">Author</option>
+            </select>
+        </div>
+        </section>
+        
+
+        <section class="book-list-container">
+            <article class="book-banner">
+                <div class="book-banner-cover">
+                    <img src="../img/Head-First-HTML-and-CSS.png" class="book-banner-image" alt="HTML CSS book cover">
+                </div>
+                <ul class="book-banner-list ">
+                    <li class="book-banner-item">
+                        <span class="book-banner-tag">Book name:</span>
+                        <h2 class="book-banner-title">Head First HTML and CSS</h2>
+                    </li>
+                    <li class="book-banner-item">
+                        <span class="book-banner-tag">Author:</span>
+                        <span class="book-banner-author">Elizabeth Robson and Eric Freeman</span>
+                    </li>
+                    <li class="book-banner-item">
+                        <div class="book-banner-price bold">
+                            <span class="book-banner-tag">Price:</span>
+                            <span class="book-banner-price ">17 $</span>
+                        </div>
+                        <div>
+                            <button type="button" class="book-banner-btn">View</button>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        
+        
+    </main>
+
+    <!-- -----------------FOOTER--------------- -->
+    <footer class="footer">
+
+        <p class="uppercase">Contact me:</p>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <a href="mailto:viktor.zvarych@gmail.com">
+                    <span>email: viktor.zvarych@gmail.com</span>
+                </a>
+            </li>
+            <li class="contact-item">
+                <a href="tel:+380987365773">
+                    <span>tel: +380987365773</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="contact-button">
+            <div id="contact-button" class="wave">
+                <i></i>
+            </div>
+            <button>
+                <i></i>
+                <a href="#" class="contact-mail-me">Mail me</a>
+            </button>
+            <a href="#" class="contact-telegram-icon"><i></i></a>
+            <a href="#" class="contact-whatsapp-icon"><i></i></a>
+            <a href="#" class="contact-messenger-icon">
+                <i"></i>
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
