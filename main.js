@@ -1,75 +1,75 @@
 (() => {
   /*-------CART-------*/
-  const books = [
-    {
-      id: 1,
-      name: "Head First HTML and CSS",
-      author: "Elizabeth Robson and Eric Freeman",
-      price: 17,
-      quantity: 42,
-    },
-  ];
+  // const books = [
+  //   {
+  //     id: 1,
+  //     name: "Head First HTML and CSS",
+  //     author: "Elizabeth Robson and Eric Freeman",
+  //     price: 17,
+  //     quantity: 42,
+  //   },
+  // ];
 
-  const bookPrice = document.querySelector(".cart-form-price");
-  const bookCountInput = document.querySelector(".cart-form-count");
-  const totalPrice = document.querySelector(".cart-form-total-price");
-  const buttonAdd1 = document.querySelector(".btn-add1");
-  const buttonMinus1 = document.querySelector(".btn-minus1");
-  const addToCartBtn = document.querySelector(".add-to-cart-btn");
+  // const bookPrice = document.querySelector(".cart-form-price");
+  // const bookCountInput = document.querySelector(".cart-form-count");
+  // const totalPrice = document.querySelector(".cart-form-total-price");
+  // const buttonAdd1 = document.querySelector(".btn-add1");
+  // const buttonMinus1 = document.querySelector(".btn-minus1");
+  // const addToCartBtn = document.querySelector(".add-to-cart-btn");
 
-  const countTotalPrice = () => {
-    totalPrice.textContent =
-      Number(bookCountInput.value) * Number(bookPrice.textContent);
-    if (Number(bookCountInput.value) < 0) {
-      alert("Wrong quantity");
-      bookCountInput.value = 1;
-      totalPrice.textContent =
-        Number(bookCountInput.value) * Number(bookPrice.textContent);
-    } else if (Number(bookCountInput.value) > 42) {
-      alert(`Only ${42} books are available`);
-      bookCountInput.value = 42;
-      totalPrice.textContent =
-        Number(bookCountInput.value) * Number(bookPrice.textContent);
-    }
-  };
+  // const countTotalPrice = () => {
+  //   totalPrice.textContent =
+  //     Number(bookCountInput.value) * Number(bookPrice.textContent);
+  //   if (Number(bookCountInput.value) < 0) {
+  //     alert("Wrong quantity");
+  //     bookCountInput.value = 1;
+  //     totalPrice.textContent =
+  //       Number(bookCountInput.value) * Number(bookPrice.textContent);
+  //   } else if (Number(bookCountInput.value) > 42) {
+  //     alert(`Only ${42} books are available`);
+  //     bookCountInput.value = 42;
+  //     totalPrice.textContent =
+  //       Number(bookCountInput.value) * Number(bookPrice.textContent);
+  //   }
+  // };
 
-  const countOfBooksInCart = document.querySelector(".count-of-books");
-  const countOfBooksInCartSpan = document.querySelector(".count-of-books-span");
+  // const countOfBooksInCart = document.querySelector(".count-of-books");
+  // const countOfBooksInCartSpan = document.querySelector(".count-of-books-span");
 
-  const showCountOfBooksInCart = () => {
-    countOfBooksInCart.classList.add("count-of-books-visible");
-    countOfBooksInCartSpan.textContent = Number(bookCountInput.value);
-  };
+  // const showCountOfBooksInCart = () => {
+  //   countOfBooksInCart.classList.add("count-of-books-visible");
+  //   countOfBooksInCartSpan.textContent = Number(bookCountInput.value);
+  // };
 
-  bookPrice.textContent = books[0].price;
+  // bookPrice.textContent = books[0].price;
 
-  countTotalPrice();
+  // countTotalPrice();
 
-  buttonAdd1.addEventListener("click", add1Book, false);
-  buttonMinus1.addEventListener("click", minus1Book, false);
-  bookCountInput.addEventListener("input", changebookCountInputValue, false);
-  addToCartBtn.addEventListener("click", addToCart, false);
+  // buttonAdd1.addEventListener("click", add1Book, false);
+  // buttonMinus1.addEventListener("click", minus1Book, false);
+  // bookCountInput.addEventListener("input", changebookCountInputValue, false);
+  // addToCartBtn.addEventListener("click", addToCart, false);
 
-  function add1Book(evt) {
-    evt.preventDefault();
-    bookCountInput.value = Number(bookCountInput.value) + 1;
-    countTotalPrice();
-  }
+  // function add1Book(evt) {
+  //   evt.preventDefault();
+  //   bookCountInput.value = Number(bookCountInput.value) + 1;
+  //   countTotalPrice();
+  // }
 
-  function minus1Book(evt) {
-    evt.preventDefault();
-    bookCountInput.value = Number(bookCountInput.value) - 1;
-    countTotalPrice();
-  }
+  // function minus1Book(evt) {
+  //   evt.preventDefault();
+  //   bookCountInput.value = Number(bookCountInput.value) - 1;
+  //   countTotalPrice();
+  // }
 
-  function changebookCountInputValue(evt) {
-    evt.preventDefault();
-    countTotalPrice();
-  }
+  // function changebookCountInputValue(evt) {
+  //   evt.preventDefault();
+  //   countTotalPrice();
+  // }
 
-  function addToCart(evt) {
-    showCountOfBooksInCart();
-  }
+  // function addToCart(evt) {
+  //   showCountOfBooksInCart();
+  // }
 
   /*-------Contact Button-------*/
 
@@ -100,7 +100,7 @@
   // .then((data) => console.log(data));
 
   try {
-    await fetch(
+    let response = await fetch(
       "https://cors-anywhere.herokuapp.com/https://courses.prometheus.org.ua/assets/courseware/v1/2c108355bb16192430fcee1e56a3887d/asset-v1:Ciklum+FEB101+2022_T3+type@asset+block/books.json",
       {
         // port: 443,

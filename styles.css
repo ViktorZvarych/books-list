@@ -296,7 +296,7 @@ button.header__list-link:hover {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-    background-image: url(../img/contact-us.png);
+    background-image: url(img/contact-us.png);
   background-size: 82%;
   background-repeat: no-repeat;
   background-position: center;
@@ -376,20 +376,20 @@ button.header__list-link:hover {
 }
 
 .contact-telegram-icon {
-  background-image: url(../img/telegram.png);
+  background-image: url(img/telegram.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .contact-whatsapp-icon {
-  background-image: url(../img/whatsapp.png);
+  background-image: url(img/whatsapp.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 
 .contact-messenger-icon {
-  background-image: url(../img/msnger.png);
+  background-image: url(img/msnger.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
