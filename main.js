@@ -93,15 +93,15 @@
 (async () => {
   /*---------Book-banner---------*/
 
-  fetch(
-    "https://courses.prometheus.org.ua/assets/courseware/v1/2c108355bb16192430fcee1e56a3887d/asset-v1:Ciklum+FEB101+2022_T3+type@asset+block/books.json"
-  );
+  // fetch(
+  //   "https://courses.prometheus.org.ua/assets/courseware/v1/2c108355bb16192430fcee1e56a3887d/asset-v1:Ciklum+FEB101+2022_T3+type@asset+block/books.json"
+  // );
   // .then((response) => response.json())
   // .then((data) => console.log(data));
 
   try {
     let response = await fetch(
-      "https://cors-anywhere.herokuapp.com/https://courses.prometheus.org.ua/assets/courseware/v1/2c108355bb16192430fcee1e56a3887d/asset-v1:Ciklum+FEB101+2022_T3+type@asset+block/books.json",
+      "https://courses.prometheus.org.ua/assets/courseware/v1/2c108355bb16192430fcee1e56a3887d/asset-v1:Ciklum+FEB101+2022_T3+type@asset+block/books.json",
       {
         // port: 443,
         // mode: "cors",
